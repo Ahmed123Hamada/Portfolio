@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Nav from '../components/nav ';
+import Nav1 from '../components/Navbarr ';
 import Main from "./components/Main";
 import SkillsSection from "./components/Skills";
 import Resume from "./components/Resume";
@@ -13,7 +13,7 @@ export default function Home({ about }) {
     <>
       <div className="flex items-center justify-center min-h-screen w-full">
         <div className="w-[400px] max-lg:w-0 ">
-        <Nav />   
+        <Nav1 />   
         </div>
 <div className="flex flex-col items-center justify-center w-full gap-4 ">
         <Main  />
