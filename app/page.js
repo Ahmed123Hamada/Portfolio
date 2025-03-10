@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Nav from "./components/nav";
+import Nav from '../components/nav ';
 import Main from "./components/Main";
 import SkillsSection from "./components/Skills";
 import Resume from "./components/Resume";
