@@ -32,13 +32,14 @@ function Main() {
       className="w-full h-[100vh] object-cover brightness-50 no-repeat bg-left "
     />
 
-    <div
-      className="text-3xl text-sky-100 text-center absolute font-[sans-serif] top-[30%] left-[31.5%] shadow-blue-300 shadow-sm    p-4 rounded-2xl
-     max-md:text-2xl max-lg:right-[1%] max-md:top-[35%] max-md:p-2 max-md:rounded-2xl
-    "
-    >
-      <TypedText />
-    </div>
+<div
+  className="text-3xl text-sky-100 text-center font-[sans-serif] shadow-blue-300 shadow-sm
+    p-4 rounded-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+    max-md:text-2xl max-md:p-2 max-md:rounded-xl max-sm:w-[90%] max-sm:text-lg"
+>
+  <TypedText />
+</div>
+
 
     <div>
       {isOpen && (

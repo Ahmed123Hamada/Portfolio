@@ -15,9 +15,9 @@ export default function Home({ about }) {
         <div className="w-[400px] max-lg:w-0 ">
           <Navbarr />   
         </div>
-<div className="flex flex-col items-center justify-center w-full gap-4 ">
+<div className="flex flex-col items-center justify-center w-full gap-4 overflow-hidden">
         <Main  />
-       <Link href="/about"> <About  /></Link> 
+        <About  />
         <SkillsSection/>
         <Resume />
         <Portofoilo />
