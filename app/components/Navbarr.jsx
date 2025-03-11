@@ -12,7 +12,7 @@ import portfolioImg from "../assets/img/my-profile-img.jpg";
 import { Facebook, Twitter, LinkedIn, Instagram } from "@mui/icons-material";
 
 function Navbarr() {
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState('home');
 
   const menuItems = [
     { id: "home", label: "Home", icon: <HomeIcon /> },
@@ -61,7 +61,7 @@ function Navbarr() {
           <li key={item.id}>
             <a
               href={`#${item.id}`}
-              onClick={() => setActive(item.id)}
+              onClick={() => setActive(item.id  ) }
               className={`text-sm flex items-center  gap-3 px-4 py-3 rounded transition-all ${
                 active === item.id ? "text-blue-600 font-bold bg-blue-100" : "text-black hover:text-blue-600 hover:bg-blue-50"
               }`}

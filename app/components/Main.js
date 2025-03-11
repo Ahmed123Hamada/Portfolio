@@ -14,9 +14,11 @@ import { useState } from "react";
 import TypedText from "./TypedText";
 import Image from "next/image";
 import heroImg from  "../assets/img/hero.png";
+import portfolioImg from "../assets/img/my-profile-img.jpg";
+
 function Main() {
       const [isOpen, setIsOpen] = useState(false);
-      const [active, setActive] = useState();
+      const [active, setActive] = useState('home');
       const menuItems = [
         { id: "home", label: "Home", icon: <HomeIcon /> },
         { id: "about", label: "About", icon: <ArticleOutlinedIcon /> },
@@ -63,15 +65,42 @@ function Main() {
             </span>
           </button>
 
-          <h1 className="text-2xl font-bold text-center mt-4">
-            Ahmed Hamada
-          </h1>
+<Image
+        src={portfolioImg}
+        alt="Profile Image"
+        className="mx-auto w-[100px] rounded-full circle  shadow-lg border-4 border-gray-600"
+      />
+
+      <h1 className="text-2xl font-bold text-center mt-4">Ahmed Hamada</h1>
+      <div className="flex justify-center items-center gap-4 mt-4 divide-x  divide-gray-600 duration-500 ">
+        <div className="px-12 py-4 bg-blue-100/60  rounded-xl flex items-center justify-between gap-4">
+       <a
+          href="https://www.facebook.com/profile.php?id=100055875888322"
+          className="hover:text-blue-600 duration-500 hover:rotate-45 "
+        >
+          <Facebook />
+        </a>{" "}
+        <a href="/" className="hover:text-blue-400 duration-500 ">
+          <Twitter />
+        </a>{" "}
+        <a
+          href="www.linkedin.com/in/ahmed-hamada-662922211 "
+          className="hover:text-blue-600 duration-500 "
+        >
+          <LinkedIn />
+        </a>{" "}
+        <a href="/" className="hover:text-red-500 duration-500 ">
+          <Instagram />
+        </a>
+      </div>
+      </div>
+          
 
           <ul className="mt-6">
             <li>
               <a
                 href="#home"
-                onClick={() => setActive("home")}
+                onClick={() => (setActive("home"), setIsOpen(!isOpen))}
                 className={`text-sm flex items-center gap-3 px-4 py-3 rounded transition-all ${
                   active === "home"
                     ? "text-blue-600 font-bold bg-blue-100"
@@ -94,7 +123,7 @@ function Main() {
               <li>
                 <a
                   href="#about"
-                  onClick={() => setActive("about")}
+                  onClick={() =>(setActive("about"), setIsOpen(!isOpen))}
                   className={`text-sm flex items-center gap-3 px-4 py-3 rounded transition-all ${
                     active === "about"
                       ? "text-blue-600 font-bold bg-blue-100"
@@ -119,7 +148,7 @@ function Main() {
               <li>
                 <a
                   href="#resume"
-                  onClick={() => setActive("resume")}
+                  onClick={() => (setActive("resume"), setIsOpen(!isOpen))}
                   className={`text-sm flex items-center gap-3 px-4 py-3 rounded transition-all ${
                     active === "resume"
                       ? "text-blue-600 font-bold bg-blue-100"
@@ -133,7 +162,7 @@ function Main() {
               <li>
                 <a
                   href="#portfolio"
-                  onClick={() => setActive("portfolio")}
+                  onClick={() => (setActive("portfolio"), setIsOpen(!isOpen))}
                   className={`text-sm flex items-center gap-3 px-4 py-3 rounded transition-all ${
                     active === "portfolio"
                       ? "text-blue-600 font-bold bg-blue-100"
@@ -155,6 +184,7 @@ function Main() {
               <li>
                 <a
                   href="#skills"
+                  onClick={() => (setActive("skills"), setIsOpen(!isOpen))}
                   className="text-black hover:text-blue-600 text-sm flex items-center hover:bg-blue-50 rounded px-4 py-3 transition-all gap-3"
                 >
                   <SchoolOutlinedIcon />
@@ -163,7 +193,8 @@ function Main() {
               </li>
               <li>
                 <a
-                  href="javascript:void(0)"
+                onClick={() => (setActive("skills"), setIsOpen(!isOpen))}
+                  href="#skills"
                   className="text-black hover:text-blue-600 text-sm flex items-center hover:bg-blue-50 rounded px-4 py-3 transition-all gap-3"
                 >
                   <AutoAwesomeOutlinedIcon />
@@ -181,7 +212,7 @@ function Main() {
               <li>
                 <a
                   href="#contact" 
-                  onClick={() => setActive("contact")}
+                  onClick={() => (setActive("contact"), setIsOpen(!isOpen))}
                   className={`text-sm flex items-center gap-3 px-4 py-3 rounded transition-all ${
                     active === "contact"
                       ? "text-blue-600 font-bold bg-blue-100"
